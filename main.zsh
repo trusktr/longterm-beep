@@ -21,7 +21,7 @@ function longterm-beep-precmd {
         # Store the difference between the last command start date vs. current date.
         CMD_ELAPSED_TIME=$(($CMD_END_DATE - $CMD_START_DATE))
         # Store an arbitrary threshold, in seconds.
-        CMD_NOTIFY_THRESHOLD=5
+        CMD_NOTIFY_THRESHOLD=20
 
         if [[ $CMD_ELAPSED_TIME -gt $CMD_NOTIFY_THRESHOLD ]]; then
             # Beep or visual bell if the elapsed time (in seconds) is greater than threshold
